@@ -6,6 +6,7 @@ import { makeServer } from "./server";
 import { DataProvider } from "./context/data/videoContext";
 import { AuthProvider } from "./context/auth/authContext";
 import { ThemeProvider } from "./context/theme/themeContext";
+
 // Call make Server
 makeServer();
 
