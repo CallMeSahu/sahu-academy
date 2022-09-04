@@ -53,23 +53,12 @@ export function Navbar() {
           </div>
           <ul className="navbar-right">
             <li className="nav-header-icon">
-              {theme === "light"? 
-              (
-                <i 
-                className="fa fa-sun-o nav-header-icon"
-                aria-hidden="true"
-                onClick={() => changeTheme()}
-              >
-              </i>
-              ) : (
               <i 
-                className="fa fa-moon-o nav-header-icon"
+                className={`fa nav-header-icon ${ theme === "light" ? "fa-sun-o" : "fa-moon-o"}`}
                 aria-hidden="true"
                 onClick={() => changeTheme()}
               >
-              </i>
-              )}
-              
+              </i>                
             </li>
             <li className="login nav-header-icon">
               {!token ? (
