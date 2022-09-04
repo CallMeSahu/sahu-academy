@@ -1,42 +1,45 @@
-.navbar{
+/* Navbar Styles */
+.navbar {
     flex-direction: column;
-    background-color: var(--navbar-color);
-    padding-bottom: 0.5rem;
+    background: var(--navbar-color);
 }
 
-.logo{
-    height: 70px;
-}
-
-.navbar-left h2{
+.navbar-left h2 {
     letter-spacing: 1px;
-    margin-left: 0.85rem;
-    font-size: 1.5rem;
-    margin-bottom: 12px;
+    margin-left: 0.5rem;
 }
 
-.navbar-main{
+.logo {
+    height: 40px;
+}
+
+.navbar-main {
     display: flex;
     align-items: center;
     width: 100%;
     justify-content: space-between;
-    padding: 0 2rem;
+    padding: 0 1rem
 }
 
-.search-container{
+.navbar-right > li {
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+/* Search Bar */
+.search-container {
     display: flex;
     align-items: center;
     background-color: var(--container-color-dark);
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.9rem;
     gap: 1rem;
-    width: 35%;
+    width: 25%;
     overflow: auto;
-    border-radius: 0.5rem;
+    border-radius: var(--border-md);
     color: var(--font-color);
-    margin-right: 9rem;
 }
 
-.search-bar{
+.search-bar {
     outline: none;
     border: none;
     width: 100%;
@@ -45,7 +48,7 @@
     background-color: var(--container-color-dark);
 }
 
-.searchbar::placeholder{
+.search-bar::placeholder {
     background-color: var(--container-color-dark);
     font-weight: var(--font-light);
     color: var(--font-color);
@@ -75,15 +78,6 @@
 .nav-header-icon{
     color: var(--icon-color);
 }
-
-
-.navbar-right > li{
-    cursor: pointer;
-    font-size: 1.75rem;
-    padding: 0.5rem;
-}
-
-
 
 @media screen and (max-width: 950px) {
 
@@ -128,17 +122,6 @@
         cursor: default;
         font-size: 1.4rem;
     }
-}
-
-.drawer-hamberg-btn {
-    display: none;
-    font-size: 1.4rem;
-    margin-right: 0.5rem;
-}
-
-.drawer-hamberg-btn:hover{
-    background: none;
-    color:var(--primary-color);
 }
 
 @media screen and (min-width:500px) {
