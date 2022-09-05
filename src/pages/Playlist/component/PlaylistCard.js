@@ -10,12 +10,18 @@ export default function PlaylistCard({ video, listId }) {
   const { dispatch, videos } = useData();
   const { token } = useAuth();
   const navigate = useNavigate();
+
+  const clickToVideoHandler = () => {
+    navigate(`/video/${_id}`);
+    token && !isInHistory && addToHistory(dispatch, video, token);
+  };
+  
   return (
     <div className="card">
       <img
         className="card-image"
         src={`https://i.ytimg.com/vi/${_id}/0.jpg`}
-        onClick={() => navigate(`/video/${_id}`)}
+        onClick={() => clickToVideoHandler()}
       />
       <div className="card-info" title={title}>
         <div className="card-title">

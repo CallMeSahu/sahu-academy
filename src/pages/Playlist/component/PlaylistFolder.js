@@ -33,7 +33,7 @@ export default function PlaylistFolder({ listFolder }) {
 
       <div className="card-info">
         <div className="card-title">
-          <h3 className="card-title-header">{title}</h3>
+          <h3 className="card-title-header" onClick={() => navigate(`/playlist/${_id}`)}>{title}</h3>
 
           <div className="ellipse" onClick={() => setShowList(!showList)}>
             <i className="fa fa-ellipsis-v" aria-hidden="true"></i>

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import "./VideoCard.css";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../../context/auth/authContext";
 import { useData } from "../../../context/data/videoContext";
@@ -58,7 +57,7 @@ export default function VideoCard({ video }) {
             </div>
           </div>
           </div>
-          <div className="card-description">
+          <div className="card-description" onClick={() => clickToVideoHandler()}>
             <p>{creator}</p>
             <p>{uploaded}</p>
         </div>
