@@ -20,7 +20,7 @@
     right: 0px;
     opacity: 0.9;
     gap:1rem;
-    border-radius: 0 1rem 0 0;
+    border-radius: 0 1rem 1rem 0;
 }
 
 .empty{

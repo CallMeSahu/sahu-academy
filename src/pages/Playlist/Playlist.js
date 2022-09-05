@@ -29,7 +29,7 @@ export function Playlist() {
       ) : (
         <div className="message-container flex-center">
           <p className="paragraph-md">
-            Looks like you haven't create playlist.
+            Looks like you haven't created a playlist.
           </p>
           <button className="btn btn-start-watch" onClick={() => navigate("/")}>
             Start Creating Now

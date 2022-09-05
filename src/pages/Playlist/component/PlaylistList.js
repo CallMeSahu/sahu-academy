@@ -30,7 +30,7 @@ export function PlaylistList() {
       ) : (
         <div className="message-container flex-center">
           <p className="paragraph-md">
-            Looks like you haven't added anything in {title}.
+            Looks like you haven't added anything to {title}.
           </p>
           <button className="btn btn-start-watch" onClick={() => navigate("/")}>
             Start Adding Now
