@@ -1,0 +1,9 @@
+.mini-loader-wrapper{
+    width: 100%;
+}
+
+@media screen and (max-width:500px) {
+    .mini-loader{
+        width: 30px;
+    }        
+}

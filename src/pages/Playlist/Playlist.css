@@ -1,0 +1,29 @@
+.card-image {
+    position: relative;
+}
+.playlistFolder{
+    border-radius: 1rem;
+}
+.card-title-header{
+    background-color: var(--bg-color);
+    border: none;
+    outline: none;
+    color: var(--font-color);
+}
+.card-highlight {
+    font-size: 1.5rem;
+    background-color: var(--bg-color);
+    height: 100%;
+    width: 40%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    opacity: 0.9;
+    gap:1rem;
+    border-radius: 0 1rem 0 0;
+}
+
+.empty{
+    background-image: transparent;
+    color:var(--font-color)
+}

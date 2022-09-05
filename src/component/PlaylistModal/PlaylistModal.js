@@ -7,6 +7,7 @@ import {
   createNewPlaylist,
   removeVideoFromPlaylist,
 } from "../../services";
+import { MiniLoader } from "../Loader/MiniLoader";
 import "./PlaylistModal.css";
 
 export function PlaylistModal() {
@@ -14,6 +15,7 @@ export function PlaylistModal() {
   const [showInput, setShowInput] = useState(false);
   const { token } = useAuth();
   const [playlistName, setPlaylistName] = useState("");
+  const [miniLoader, setMiniLoader] = useState(false);
 
   const createHandler = (e) => {
     setShowInput(true);
@@ -21,7 +23,6 @@ export function PlaylistModal() {
       createNewPlaylist(dispatch, playlistName, token, setShowInput);
     setPlaylistName("");
   };
-
   return (
     <div
       className={`modal-wrapper flex-center ${
@@ -37,7 +38,10 @@ export function PlaylistModal() {
             onClick={() => setModal(!modal)}
           />
         </div>
-        {playlist.length > 0 &&
+        {miniLoader ? (
+          <MiniLoader />
+        ) : (
+          playlist.length > 0 &&
           playlist.map((list) => {
             const isInPlaylist = list.videos?.some(
               (list) => list._id === modalData._id
@@ -68,19 +72,20 @@ export function PlaylistModal() {
                           )
                     }
                   />
-                  <span className="select-input-text">  {list.title}</span>
+                  <span className="select-input-text"> {list.title}</span>
                 </label>
               </div>
             );
-          })}
-          <div
+          })
+        )}
+        <div
           className={`modal-input ${
             showInput ? "display-flex" : "display-none"
           }`}
         >
           <label htmlFor="mail">Name :</label>
           <input
-            className="text-input"
+            className="input"
             type="text"
             value={playlistName}
             onChange={(e) => setPlaylistName(e.target.value)}

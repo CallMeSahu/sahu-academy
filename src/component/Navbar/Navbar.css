@@ -52,6 +52,7 @@
     background-color: var(--container-color-dark);
     font-weight: var(--font-light);
     color: var(--font-color);
+    font-family: "Montserrat", sans-serif;
 }
 
 .nav-header {
