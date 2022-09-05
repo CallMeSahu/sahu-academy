@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/auth/authContext";
 import { useData } from "../../context/data/videoContext";
 import { removeFromWatchLater } from "../../services";
@@ -9,6 +9,7 @@ export function WatchLaterCard({ video }) {
   const { _id, title, creator, uploaded } = video;
   const { dispatch } = useData();
   const { token } = useAuth();
+  const navigate = useNavigate();
 
   const clickToVideoHandler = () => {
     navigate(`/video/${_id}`);
