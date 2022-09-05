@@ -123,7 +123,7 @@ export function SingleVideo() {
                   Clear
                 </p>
                 <button
-                  className={`btn default comment-btn ${
+                  className={`btn link-btn comment-btn ${
                     commentInput.length > 0 ? "enabled-btn" : "disabled-btn"
                   }`}
                   onClick={addCommentHandler}

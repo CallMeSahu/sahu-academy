@@ -8,6 +8,7 @@ import { watchLaterHandler } from "../../../utils";
 
 export default function VideoCard({ video }) {
   const navigate = useNavigate();
+  const { token } = useAuth();
   const { dispatch, setModal, setModelData } = useData();
   const [showList, setShowList] = useState(false);
   const { _id, title, creator, isInHistory, isInWatchLater, uploaded } = video;

@@ -91,6 +91,26 @@ export const videos = [
     ],
   },
   {
+    _id: "v74SZBVMPa0",
+    title: "Rebuilding the Instagram Stories UI with Tailwind CSS",
+    creator: "Tailwind Labs",
+    description:
+      "Implementing 'stories' in everything is kinda the running joke at the moment, so I thought it would be a fun exercise to build the Instagram stories UI with Tailwind CSS!",
+    category: "HTML & CSS",
+    uploaded: "Nov 20, 2020",
+    comments: [
+      {
+        user: "Arunav Khare",
+        comment: "You guys have made the task of UI design far simpler. Hats off to this amazing library and these informative and addictive videos.",
+      },
+      {
+        user: "Coding with Lewis",
+        comment: "I have been on the lookout for a mature CSS framework that has built-in stories. Tailwind CSS is the only option!",
+        color: "brown",
+      },
+    ],
+  },
+  {
     _id: "W6NZfCO5SIk",
     title: "JavaScript Tutorial for Beginners: Learn JavaScript in 1 Hour",
     description:
