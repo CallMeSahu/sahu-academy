@@ -12,7 +12,6 @@ export function Login() {
   const navigate = useNavigate();
   const location = useLocation();
   const { token, loginUser } = useAuth();
-  const { setLoader } = useData();
 
   useEffect(() => {
     (async () => {
@@ -21,11 +20,7 @@ export function Login() {
   }, [loginForm.email, loginForm.password]);
 
   if (token) {
-    setLoader(true);
-    setTimeout(() => {
-      navigate(location?.state?.from || "/", { replace: true });
-      setLoader(false);
-    }, 1000);
+    navigate(location?.state?.from || "/", { replace: true });
   }
 
   const loginHandler = () => {
