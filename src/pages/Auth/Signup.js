@@ -79,7 +79,7 @@ export function Signup() {
           <div className="auth-pwd">
             <label htmlFor="pwd">Password</label>
             <input
-              placeholder="admin"
+              placeholder="*****"
               className="pwd-input"
               type="password"
               value={signUpForm.password}
