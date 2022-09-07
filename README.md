@@ -1,6 +1,6 @@
 <div align="center">
 
-   <a href="https://sahudigital.vercel.app/">
+   <a href="https://sahuacademy.vercel.app/">
         <img src="./src/assets/README-logo.png"  alt="" /> 
    </a>
 
